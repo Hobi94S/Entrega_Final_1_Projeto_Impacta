@@ -12,4 +12,8 @@ Aplicar conceitos avançados de programação orientada a objetos na implementa�
 
 ## Grupo
 
-Gutemberg Garcez
+Gutemberg Garcez \
+Pedro Fabiano \
+Rebecca Fernandes \
+Amanda Almeida \
+Caio Vinicius
