@@ -10,6 +10,6 @@ O **Impacta** é um sistema para apoiar o engajamento de estudantes em causas so
 
 Aplicar conceitos avançados de programação orientada a objetos na implementação das classes responsáveis pelas regras e funcionalidades do sistema.
 
-## Observação
+## Grupo
 
-Não é necessário implementar uma classe com método `main`. Devem ser desenvolvidas apenas as classes do sistema, incluindo a classe `Impacta`, cujas funcionalidades serão invocadas externamente.
+Gutemberg Garcez
