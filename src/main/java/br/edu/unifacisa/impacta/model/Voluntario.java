@@ -1,6 +1,6 @@
 package br.edu.unifacisa.impacta.model;
 
-public class Voluntario {
+public class Voluntario implements Comparable<Voluntario> {
     private String nome;
     private String email;
     private String matricula;
@@ -8,46 +8,70 @@ public class Voluntario {
     private int pontuacaoImpacto;
 
     public Voluntario(String nome, String email, String matricula) {
-        throw new UnsupportedOperationException();
+        this.nome = nome;
+        this.email = email;
+        this.matricula = matricula;
+        this.quantidadeAcoes = 0;
+        this.pontuacaoImpacto = 0;
     }
 
     public String getNome() {
-        return null;
+        return nome;
     }
 
     public void setNome(String nome) {
-        throw new UnsupportedOperationException();
+        this.nome = nome;
     }
 
     public String getEmail() {
-        return null;
+        return email;
     }
 
     public void setEmail(String email) {
-        throw new UnsupportedOperationException();
+        this.email = email;
     }
 
     public String getMatricula() {
-        return null;
+        return matricula;
     }
 
     public void setMatricula(String matricula) {
-        throw new UnsupportedOperationException();
+        this.matricula = matricula;
     }
 
     public int getQuantidadeAcoes() {
-        return 0;
+        return quantidadeAcoes;
     }
 
     public void setQuantidadeAcoes(int quantidadeAcoes) {
-        throw new UnsupportedOperationException();
+        this.quantidadeAcoes = quantidadeAcoes;
     }
 
     public int getPontuacaoImpacto() {
-        return 0;
+        return pontuacaoImpacto;
     }
 
     public void setPontuacaoImpacto(int pontuacaoImpacto) {
-        throw new UnsupportedOperationException();
+        this.pontuacaoImpacto = pontuacaoImpacto;
+    }
+
+    @Override
+    public int compareTo(Voluntario outro) {
+        int comparacaoPontuacao = Integer.compare(outro.pontuacaoImpacto, pontuacaoImpacto);
+
+        if (comparacaoPontuacao != 0) {
+            return comparacaoPontuacao;
+        }
+
+        return nome.compareToIgnoreCase(outro.nome);
+    }
+
+    @Override
+    public String toString() {
+        return "Nome: " + nome
+                + ", Email: " + email
+                + ", Matrícula: " + matricula
+                + ", Quantidade de ações: " + quantidadeAcoes
+                + ", Pontuação de impacto: " + pontuacaoImpacto;
     }
 }
