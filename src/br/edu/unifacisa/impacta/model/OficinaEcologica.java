@@ -2,7 +2,7 @@ package br.edu.unifacisa.impacta.model;
 
 import java.time.LocalDateTime;
 
-public class OficinaEcologica extends AcaoSocioambiental {
+public class OficinaEcologica extends br.edu.unifacisa.impacta.model.AcaoSocioambiental {
     private int duracaoHoras;
     private boolean kitMaterial;
 

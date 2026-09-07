@@ -2,7 +2,7 @@ package br.edu.unifacisa.impacta.model;
 
 import java.time.LocalDateTime;
 
-public class PlantioMudas extends AcaoSocioambiental {
+public class PlantioMudas extends br.edu.unifacisa.impacta.model.AcaoSocioambiental {
     private int qtdMudas;
 
     public PlantioMudas(int id, String titulo, String descricao, LocalDateTime data,
