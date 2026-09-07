@@ -8,15 +8,16 @@ public class PlantioMudas extends AcaoSocioambiental {
     public PlantioMudas(int id, String titulo, String descricao, LocalDateTime data,
                         int capacidadeMax, int qtdMudas) {
         super(id, titulo, descricao, data, capacidadeMax);
-        throw new UnsupportedOperationException();
+        this.qtdMudas = qtdMudas;
     }
 
     @Override
     public int calcularPontuacao() {
-        return 0;
+
+        return 5 + (2 * qtdMudas);
     }
 
     public int getQtdMudas() {
-        return 0;
+        return qtdMudas;
     }
 }

@@ -8,15 +8,17 @@ public class MutiraoReciclagem extends AcaoSocioambiental {
     public MutiraoReciclagem(int id, String titulo, String descricao, LocalDateTime data,
                              int capacidadeMax, int duracaoHoras) {
         super(id, titulo, descricao, data, capacidadeMax);
-        throw new UnsupportedOperationException();
+        this.duracaoHoras = duracaoHoras;
     }
 
     @Override
     public int calcularPontuacao() {
-        return 0;
+
+        return 4 * duracaoHoras;
     }
 
     public int getDuracaoHoras() {
-        return 0;
+
+        return duracaoHoras;
     }
 }

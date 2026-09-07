@@ -1,44 +1,56 @@
 package br.edu.unifacisa.impacta.model;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
-public abstract class AcaoSocioambiental {
+public abstract class AcaoSocioambiental { //toda ação socioambiental vai ter essas características
     private int id;
     private String titulo;
     private String descricao;
     private LocalDateTime data;
     private int capacidadeMax;
-    private List<Voluntario> inscritos;
+    private List<Voluntario> inscritos = new ArrayList<>();
 
     protected AcaoSocioambiental(int id, String titulo, String descricao,
                                  LocalDateTime data, int capacidadeMax) {
-        throw new UnsupportedOperationException();
+        this.id = id;
+        this.titulo = titulo;
+        this.descricao = descricao;
+        this.data = data;
+        this.capacidadeMax = capacidadeMax;
     }
 
     public abstract int calcularPontuacao();
 
     public int getId() {
-        return 0;
+
+        return id;
     }
 
     public String getTitulo() {
-        return null;
+
+        return titulo;
     }
 
     public String getDescricao() {
-        return null;
+
+        return descricao;
     }
 
     public LocalDateTime getData() {
-        return null;
+
+        return data;
     }
 
     public int getCapacidadeMax() {
-        return 0;
+
+        return capacidadeMax;
     }
 
     public List<Voluntario> getInscritos() {
-        return null;
+
+        return inscritos;
     }
+
 }

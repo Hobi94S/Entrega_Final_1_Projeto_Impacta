@@ -9,19 +9,24 @@ public class OficinaEcologica extends AcaoSocioambiental {
     public OficinaEcologica(int id, String titulo, String descricao, LocalDateTime data,
                             int capacidadeMax, int duracaoHoras, boolean kitMaterial) {
         super(id, titulo, descricao, data, capacidadeMax);
-        throw new UnsupportedOperationException();
+        this.duracaoHoras = duracaoHoras;
+        this.kitMaterial = kitMaterial;
     }
 
     @Override
     public int calcularPontuacao() {
-        return 0;
+        if (kitMaterial) {
+            return 3 * duracaoHoras + 10;
+        } else {
+            return 3 * duracaoHoras;
+        }
     }
 
     public int getDuracaoHoras() {
-        return 0;
+        return duracaoHoras;
     }
 
     public boolean isKitMaterial() {
-        return false;
+        return kitMaterial;
     }
 }
