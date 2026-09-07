@@ -18,6 +18,7 @@ public class PlantioMudas extends br.edu.unifacisa.impacta.model.AcaoSocioambien
     }
 
     public int getQtdMudas() {
+
         return qtdMudas;
     }
 }
