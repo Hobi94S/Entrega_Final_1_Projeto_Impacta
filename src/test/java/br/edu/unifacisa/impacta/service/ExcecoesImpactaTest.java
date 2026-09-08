@@ -2,7 +2,6 @@ package br.edu.unifacisa.impacta.service;
 
 import br.edu.unifacisa.impacta.exception.AcaoLotadaException;
 import br.edu.unifacisa.impacta.exception.EmailDuplicadoException;
-import br.edu.unifacisa.impacta.exception.InscricaoDuplicadaException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
