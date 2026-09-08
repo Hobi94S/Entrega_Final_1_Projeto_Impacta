@@ -6,21 +6,48 @@ import java.time.LocalDateTime;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-
 class CalculoPontuacaoTest {
+
     @Test
     void deveCalcularPontuacaoDoPlantioPolimorficamente() {
-        AcaoSocioambiental acao = new PlantioMudas(1, "Plantio", "Plantio de girassol",LocalDateTime.of(2026,9,2,10,0
-        ), 10, 5 ); //criando um LocalDateTime com as informações q estou passando
+        AcaoSocioambiental acao = new PlantioMudas(
+                1,
+                "Plantio",
+                "Plantio de girassol",
+                LocalDateTime.of(2026, 9, 2, 10, 0),
+                10,
+                5
+        );
 
         assertEquals(15, acao.calcularPontuacao());
     }
 
     @Test
     void deveCalcularPontuacaoDoMutiraoPolimorficamente() {
+        AcaoSocioambiental acao = new MutiraoReciclagem(
+                1,
+                "Mutirão",
+                "Coleta seletiva",
+                LocalDateTime.of(2026, 9, 2, 10, 0),
+                10,
+                4
+        );
+
+        assertEquals(16, acao.calcularPontuacao());
     }
 
     @Test
     void deveCalcularPontuacaoDaOficinaPolimorficamente() {
+        AcaoSocioambiental acao = new OficinaEcologica(
+                1,
+                "Oficina",
+                "Compostagem",
+                LocalDateTime.of(2026, 9, 2, 10, 0),
+                10,
+                3,
+                true
+        );
+
+        assertEquals(19, acao.calcularPontuacao());
     }
 }
