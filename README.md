@@ -16,4 +16,5 @@ Gutemberg Garcez \
 Pedro Fabiano \
 Rebecca Fernandes \
 Amanda Almeida \
-Caio Vinicius
+Caio Vinicius \
+Joaquim Júnior 
